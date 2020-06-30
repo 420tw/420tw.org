@@ -20,7 +20,7 @@ const Navbar = ({ intl }) => {
   return (
     <nav className="flex flex-col justify-center p-6 bg-gray-200 dark:bg-teal-900">
       <div className="text-white self-center">
-        <a href={`/`}>
+        <Link to={`/${intl.locale}`}>
           <img
             src={lightLogo}
             alt={`420TW.ORG`}
@@ -31,14 +31,14 @@ const Navbar = ({ intl }) => {
             alt={`420TW.ORG`}
             className="h-12 lg:h-16 block dark:hidden"
           />
-        </a>
+        </Link>
       </div>
       <h1 className="text-teal-900 dark:text-white  text-center uppercase my-2 text-xl lg:text-2xl font-semibold">
-        <a href={`/`}>420 台灣</a>
+        <Link to={`/${intl.locale}`}>420 台灣</Link>
       </h1>
       <ul className="flex justify-center overflow-scroll">
-        <NavLink intl={intl} dest={`/`} name="首頁" />
-        <NavLink intl={intl} dest={`/community`} name="420 友善社群" />
+        <NavLink intl={intl} dest={``} name="首頁" />
+        <NavLink intl={intl} dest={`community`} name="420 友善社群" />
       </ul>
     </nav>
   )
