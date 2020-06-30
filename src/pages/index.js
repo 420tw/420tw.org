@@ -1,6 +1,6 @@
 import React, { useEffect } from "react"
 import Index from "../layouts"
-import { navigate, withPrefix } from "gatsby"
+import { graphql, navigate, withPrefix } from "gatsby"
 import { getUserLangKey } from "ptz-i18n"
 
 export default function Home({ data }) {
@@ -15,3 +15,16 @@ export default function Home({ data }) {
   })
   return <Index>Hello world!</Index>
 }
+
+export const pageQuery = graphql`
+  query IndexQuery {
+    site {
+      siteMetadata {
+        languages {
+          defaultLangKey
+          langs
+        }
+      }
+    }
+  }
+`
