@@ -7,6 +7,7 @@ import {
   AiFillYoutube,
   AiFillTwitterSquare,
   AiFillRedditSquare,
+  AiOutlineComment,
 } from "react-icons/ai"
 
 const IconLink = ({ dest, icon, title }) => {
@@ -65,6 +66,11 @@ const Links = ({ resource }) => {
         dest={resource.reddit}
         title={`reddit`}
         icon={<AiFillRedditSquare />}
+      />
+      <IconLink
+        dest={resource.group}
+        title={`reddit`}
+        icon={<AiOutlineComment />}
       />
     </div>
   )

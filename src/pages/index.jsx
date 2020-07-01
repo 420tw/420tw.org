@@ -15,5 +15,5 @@ export default function Home() {
       navigate(homeUrl)
     }
   })
-  return <Index>Hello world!</Index>
+  return <div>Hello world!</div>
 }
