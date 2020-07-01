@@ -6,7 +6,10 @@ import Home from "../containers/home"
 export default () => {
   const data = useStaticQuery(graphql`
     {
-      resources: allContentfulResources(filter: { node_locale: { eq: "en" } }) {
+      resources: allContentfulResources(
+        filter: { node_locale: { eq: "en" } }
+        sort: { fields: name }
+      ) {
         ...ResourcesFragment
       }
     }

@@ -1,9 +1,8 @@
 import React from "react"
 import ResourceCard from "../components/resource/card"
-import { shuffle } from "../utils"
 
 const Home = ({ resources }) => {
-  const resourceCards = shuffle(resources).map(node => (
+  const resourceCards = resources.map(node => (
     <ResourceCard key={node.node.id} resource={node.node} />
   ))
   return (
