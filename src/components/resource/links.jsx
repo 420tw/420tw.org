@@ -9,7 +9,7 @@ import {
   AiFillRedditSquare,
 } from "react-icons/ai"
 
-const IconLink = ({ dest, icon }) => {
+const IconLink = ({ dest, icon, title }) => {
   return (
     <div className="flex items-baseline">
       {dest && (
@@ -18,6 +18,8 @@ const IconLink = ({ dest, icon }) => {
           target="_blank"
           className="text-xl pr-2 text-gray-800 dark:text-gray-100"
           rel="noreferrer"
+          name={title}
+          aria-label={title}
         >
           {icon}
         </a>
@@ -29,13 +31,41 @@ const IconLink = ({ dest, icon }) => {
 const Links = ({ resource }) => {
   return (
     <div className="flex my-3">
-      <IconLink dest={resource.website} icon={<AiFillHome />} />
-      <IconLink dest={resource.facebook} icon={<AiFillFacebook />} />
-      <IconLink dest={resource.instagram} icon={<AiFillInstagram />} />
-      <IconLink dest={resource.medium} icon={<AiFillMediumSquare />} />
-      <IconLink dest={resource.youtube} icon={<AiFillYoutube />} />
-      <IconLink dest={resource.twitter} icon={<AiFillTwitterSquare />} />
-      <IconLink dest={resource.reddit} icon={<AiFillRedditSquare />} />
+      <IconLink
+        dest={resource.website}
+        title={`website`}
+        icon={<AiFillHome />}
+      />
+      <IconLink
+        dest={resource.facebook}
+        title={`facebook`}
+        icon={<AiFillFacebook />}
+      />
+      <IconLink
+        dest={resource.instagram}
+        title={`instagram`}
+        icon={<AiFillInstagram />}
+      />
+      <IconLink
+        dest={resource.medium}
+        title={`medium`}
+        icon={<AiFillMediumSquare />}
+      />
+      <IconLink
+        dest={resource.youtube}
+        title={`youtube`}
+        icon={<AiFillYoutube />}
+      />
+      <IconLink
+        dest={resource.twitter}
+        title={`twitter`}
+        icon={<AiFillTwitterSquare />}
+      />
+      <IconLink
+        dest={resource.reddit}
+        title={`reddit`}
+        icon={<AiFillRedditSquare />}
+      />
     </div>
   )
 }
