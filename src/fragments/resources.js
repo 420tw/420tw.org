@@ -7,7 +7,7 @@ export const ResourcesFragment = graphql`
         id
         name
         profile {
-          fluid {
+          fluid(maxWidth: 360) {
             ...GatsbyContentfulFluid_withWebp
           }
         }
