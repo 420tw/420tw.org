@@ -1,5 +1,4 @@
 import React, { useEffect } from "react"
-import Index from "../components/layout"
 import { navigate, withPrefix } from "gatsby"
 import { getUserLangKey } from "ptz-i18n"
 import { useSiteMetadata } from "../hooks/use-site-metadata"
