@@ -7,6 +7,8 @@ export const useSiteMetadata = () => {
         site {
           siteMetadata {
             title
+            siteUrl
+            twitter
             languages {
               defaultLangKey
               langs

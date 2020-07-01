@@ -1,16 +1,15 @@
 /*eslint no-unused-vars: "error"*/
 import React from "react"
-import { graphql } from "gatsby"
-import Home from "../containers/Home"
+import { graphql, useStaticQuery } from "gatsby"
+import Home from "../containers/home"
 
-export default ({ data }) => {
-  return <Home data={data} />
-}
-
-export const query = graphql`
-  {
-    resources: allContentfulResources(filter: { node_locale: { eq: "en" } }) {
-      ...ResourcesFragment
+export default () => {
+  const data = useStaticQuery(graphql`
+    {
+      resources: allContentfulResources(filter: { node_locale: { eq: "en" } }) {
+        ...ResourcesFragment
+      }
     }
-  }
-`
+  `)
+  return <Home resources={data.resources.edges} />
+}

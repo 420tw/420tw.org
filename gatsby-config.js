@@ -13,6 +13,9 @@ module.exports = {
   /* Your site config here */
   siteMetadata: {
     title: `420 Asia`,
+    description: `420 friendly community in Asia.`,
+    siteUrl: `https://420asia.org/`,
+    twitter: `@420asia`,
     languages,
   },
   plugins: [
@@ -27,7 +30,12 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-postcss`,
-    `gatsby-plugin-layout`,
+    {
+      resolve: `gatsby-plugin-layout`,
+      options: {
+        component: `${__dirname}/src/components/layout`,
+      },
+    },
     {
       resolve: `gatsby-source-contentful`,
       options: {
@@ -46,9 +54,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `420 Asia`,
-        short_name: `420 Asia`,
-        description: `420 Asia`,
+        name: `420 亞洲`,
+        short_name: `420 亞洲`,
+        description: `420 亞洲`,
         start_url: `/`,
         background_color: `#0D4F53`,
         theme_color: `#FFFFFF`,
@@ -56,11 +64,11 @@ module.exports = {
         icon: `src/images/marijuana.png`,
         localize: [
           {
-            start_url: `/en/`,
-            lang: `en`,
-            name: `420 Asia`,
-            short_name: `420 Asia`,
-            description: `420 Asia`,
+            start_url: `/zh/`,
+            lang: `zh`,
+            name: `420 亞洲`,
+            short_name: `420 亞洲`,
+            description: `420 亞洲`,
           },
         ],
       },

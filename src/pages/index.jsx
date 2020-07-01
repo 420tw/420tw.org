@@ -1,12 +1,14 @@
 import React, { useEffect } from "react"
-import Index from "../layouts"
-import { graphql, navigate, withPrefix } from "gatsby"
+import Index from "../components/layout"
+import { navigate, withPrefix } from "gatsby"
 import { getUserLangKey } from "ptz-i18n"
+import { useSiteMetadata } from "../hooks/use-site-metadata"
 
-export default function Home({ data }) {
+export default function Home() {
+  const { languages } = useSiteMetadata()
   useEffect(() => {
     if (typeof window !== "undefined") {
-      const { langs, defaultLangKey } = data.site.siteMetadata.languages
+      const { langs, defaultLangKey } = languages
       const langKey = getUserLangKey(langs, defaultLangKey)
       const homeUrl = withPrefix(`/${langKey}/`)
 
@@ -15,16 +17,3 @@ export default function Home({ data }) {
   })
   return <Index>Hello world!</Index>
 }
-
-export const pageQuery = graphql`
-  query IndexQuery {
-    site {
-      siteMetadata {
-        languages {
-          defaultLangKey
-          langs
-        }
-      }
-    }
-  }
-`
