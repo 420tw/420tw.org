@@ -5,7 +5,7 @@ import useLanguage from "../hooks/use-language"
 import ogImage from "../images/420Asia.org.png"
 
 const SiteMetadata = ({ pathname }) => {
-  const { title, siteUrl, twitter } = useSiteMetadata()
+  const { title, description, siteUrl, twitter } = useSiteMetadata()
   const { currentLang } = useLanguage()
   const href = `${siteUrl}${pathname}`
   return (
@@ -17,7 +17,10 @@ const SiteMetadata = ({ pathname }) => {
         name="viewport"
         content="width=device-width,initial-scale=1,shrink-to-fit=no,viewport-fit=cover"
       />
+      <meta name="description" content={description} />
 
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
       <meta property="og:url" content={href} />
       <meta property="og:type" content="website" />
       <meta property="og:locale" content={currentLang} />

@@ -15,7 +15,7 @@ export default ({ children }) => {
       key={currentLang}
       messages={i18nMessages}
     >
-      <SiteMetadata />
+      <SiteMetadata pathname={`/`} />
       <Navbar />
       {children}
       <Footer />
