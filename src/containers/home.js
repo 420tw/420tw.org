@@ -1,6 +1,6 @@
 import React from "react"
 import ResourceCard from "../components/resource/card"
-import { shuffle } from "lodash"
+import { shuffle } from "../utils"
 
 const Home = ({ resources }) => {
   const resourceCards = shuffle(resources).map(node => (
