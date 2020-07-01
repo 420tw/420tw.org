@@ -19,7 +19,6 @@ const IconLink = ({ dest, icon, title }) => {
           target="_blank"
           className="text-xl pr-2 text-gray-800 dark:text-gray-100"
           rel="noreferrer"
-          name={title}
           aria-label={title}
         >
           {icon}
