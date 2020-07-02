@@ -5,7 +5,7 @@ import Footer from "./footer"
 import SiteMetadata from "./site-metadata"
 import useLanguage from "../hooks/use-language"
 
-export default ({ children }) => {
+const Layout = ({ children }) => {
   const { currentLang } = useLanguage()
   const i18nMessages = require(`../data/messages/${currentLang}`)
 
@@ -22,3 +22,4 @@ export default ({ children }) => {
     </IntlProvider>
   )
 }
+export default Layout
