@@ -1,13 +1,13 @@
 import React from "react"
-import ResourceCard from "../components/resource/card"
+import Grids from "../components/resource/grids"
 
 const Home = ({ resources }) => {
-  const resourceCards = resources.map(node => (
-    <ResourceCard key={node.node.id} resource={node.node} />
-  ))
   return (
-    <div className="max-w-6xl lg:max-w-full mx-auto px-8 py-8 flex flex-col">
-      <div className="flex flex-wrap">{resourceCards}</div>
+    <div className="max-w-6xl lg:max-w-full mx-auto px-8 py-8 flex flex-wrap">
+      <div className="w-full md:w-3/4">Left</div>
+      <div className="w-full md:w-1/4">
+        <Grids resources={resources} />
+      </div>
     </div>
   )
 }

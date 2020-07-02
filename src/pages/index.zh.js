@@ -14,5 +14,5 @@ export default () => {
       }
     }
   `)
-  return <Home resources={data.resources.edges} />
+  return <Home resources={data.resources.nodes} />
 }

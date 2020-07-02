@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import Home from "../containers/home"
+import Community from "../containers/community"
 
 export default () => {
   const data = useStaticQuery(graphql`
@@ -13,5 +13,5 @@ export default () => {
       }
     }
   `)
-  return <Home resources={data.resources.edges} />
+  return <Community resources={data.resources.nodes} />
 }
