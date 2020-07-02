@@ -10,7 +10,7 @@ export default () => {
         filter: { node_locale: { eq: "en" } }
         sort: { fields: name }
       ) {
-        ...ResourcesFragment
+        ...ResourcesProfileFragment
       }
     }
   `)

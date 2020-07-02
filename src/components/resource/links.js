@@ -30,7 +30,7 @@ const IconLink = ({ dest, icon, title }) => {
 
 const Links = ({ resource }) => {
   return (
-    <div className="flex my-3">
+    <div className="flex">
       <IconLink
         dest={resource.website}
         title={`website`}

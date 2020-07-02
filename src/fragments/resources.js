@@ -1,10 +1,29 @@
 import { graphql } from "gatsby"
 
+export const ResourcesProfileFragment = graphql`
+  fragment ResourcesProfileFragment on ContentfulResourcesConnection {
+    nodes {
+      id
+      name
+      slug
+      profile {
+        fluid(maxWidth: 360) {
+          ...GatsbyContentfulFluid_withWebp
+        }
+      }
+    }
+  }
+`
+
 export const ResourcesFragment = graphql`
   fragment ResourcesFragment on ContentfulResourcesConnection {
     nodes {
       id
       name
+      slug
+      description {
+        json
+      }
       profile {
         fluid(maxWidth: 360) {
           ...GatsbyContentfulFluid_withWebp

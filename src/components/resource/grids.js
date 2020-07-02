@@ -7,6 +7,7 @@ const Grids = ({ resources }) => {
       <Fragment key={resource.id}>
         <Img
           fluid={resource.profile.fluid}
+          title={resource.name}
           alt={resource.name}
           className="rounded h-12 w-12 my-1 mx-1"
         />

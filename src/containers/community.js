@@ -8,7 +8,7 @@ const Community = ({ resources }) => {
   ))
   return (
     <Layout>
-      <div className="max-w-6xl lg:max-w-full mx-auto px-8 py-8 flex flex-col">
+      <div className="p-2 sm:p-4 md:p-6 lg:p-8 ">
         <div className="flex flex-wrap">{resourceCards}</div>
       </div>
     </Layout>

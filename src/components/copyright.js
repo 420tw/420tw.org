@@ -4,7 +4,7 @@ const Copyright = () => {
   return (
     <div className="text-center my-8">
       {"Copyright © "}
-      <a href={`/`}>420asia.org, 麻麻呼呼</a> {new Date().getFullYear()}
+      <a href={`/`}>420asia.org</a> {new Date().getFullYear()}
       {"."}
     </div>
   )

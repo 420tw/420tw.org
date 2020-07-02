@@ -43,7 +43,7 @@ const Tag = ({ tag }) => {
   }
   return (
     <span className={`badge ${badgeColor(tag)} dark:${badgeColor(tag)} mx-1`}>
-      {tag}
+      #{tag}
     </span>
   )
 }
