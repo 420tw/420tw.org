@@ -6,7 +6,7 @@ import { FormattedMessage } from "react-intl"
 import React from "react"
 import { FaCannabis } from "react-icons/fa"
 
-const SelectLanguage = () => {
+const SelectLanguage = ({ style }) => {
   const { languages } = useSiteMetadata()
   const url = globalHistory.location.pathname
   const { langs, defaultLangKey } = languages
@@ -17,10 +17,12 @@ const SelectLanguage = () => {
     <Link
       key={lang.langKey}
       to={lang.link}
-      className={`${lang.selected ? "underline" : ""} mx-1 flex items-center`}
+      className={`${
+        lang.selected ? "font-semibold" : ""
+      } ${style} flex items-center`}
     >
-      {lang.selected && <FaCannabis className="inline mx-1" />}
       <FormattedMessage id={lang.langKey} />
+      {lang.selected && <FaCannabis className="inline mx-1" />}
     </Link>
   ))
 
