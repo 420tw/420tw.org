@@ -31,26 +31,26 @@ const Community = ({ resource }) => {
   ))
   return (
     <Layout>
-      <div className="flex flex-wrap p-6 lg:p-8 items-center">
+      <div className="flex flex-wrap p-4 sm:p-8 items-center">
         <div className="w-full mt-4">
           <Img
             fluid={profile.fluid}
             alt={resource.name}
             title={resource.name}
-            className="w-1/3 sm:w-48 rounded rounded-full sm:rounded-lg mx-auto sm:mx-24"
+            className="w-1/3 rounded rounded-full sm:rounded-lg sm:w-48 mx-auto sm:mx-24 shadow-2xl"
           />
         </div>
-        <div className="w-full -mt-24 p-24 bg-gray-300 dark:bg-teal-900 rounded rounded-lg">
-          <h1 className="font-bold text-4xl mt-4 text-center sm:text-left">
+        <div className="w-full -mt-12 p-6 sm:-mt-24 sm:p-24 bg-gray-300 dark:bg-teal-900 rounded rounded-lg">
+          <h1 className="font-bold text-2xl sm:text-2xl md:text-4xl mt-12 text-center sm:text-left">
             {name}
           </h1>
           <div className="my-4">{tags}</div>
-          <div className="my-4 text-2xl">
+          <div className="my-4 text-base sm:text-2xl">
             <Links resource={resource} />
           </div>
           {location && <LocationPin location={location} />}
           <div className="mx-auto sm:mx-0 w-full pt-3 border-b-2 border-teal-500 opacity-25" />
-          <div className="my-4 text-left">
+          <div className="my-4 text-left text-sm sm:text-base">
             {description && documentToReactComponents(description.json)}
           </div>
         </div>
