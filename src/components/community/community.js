@@ -6,6 +6,8 @@ import Tag from "./tag"
 import Links from "./links"
 import { AiOutlineGlobal } from "react-icons/ai"
 import { OutboundLink } from "gatsby-plugin-google-analytics"
+import Helmet from "react-helmet"
+import { useSiteMetadata } from "../../hooks/use-site-metadata"
 
 const LocationPin = ({ location }) => {
   return (
@@ -25,12 +27,24 @@ const LocationPin = ({ location }) => {
 }
 
 const Community = ({ resource }) => {
-  const { name, profile, description, location } = resource
+  const { name, profile, description, location, node_locale, slug } = resource
+  const { siteUlr } = useSiteMetadata()
+  const canonical = `${siteUlr}/${node_locale}/community/${slug}`
+  const title = resource.name
   const tags = resource.tags.map((tag, index) => (
     <Tag key={`tag__${index}`} tag={tag} />
   ))
   return (
     <Layout>
+      <Helmet>
+        <title>{name}</title>
+        <meta name="description" content={description} />
+        <link rel="canonical" href={canonical} />
+        <meta property="og:url" content={canonical} />
+        <meta property="og:locale" content={node_locale} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+      </Helmet>
       <div className="flex flex-wrap p-4 sm:p-8 items-center">
         <div className="w-full mt-4">
           <Img
