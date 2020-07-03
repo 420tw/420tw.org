@@ -4,4 +4,5 @@ module.exports = {
   community: "友善社群",
   en: "英文",
   zh: "中文",
+  published_at: "發表於",
 }

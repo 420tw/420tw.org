@@ -4,4 +4,5 @@ module.exports = {
   community: "Community",
   en: "English",
   zh: "Mandarin",
+  published_at: "Published at",
 }

@@ -1,13 +1,16 @@
 import React from "react"
 import Grids from "../components/community/grids"
 import Layout from "../components/layout"
+import Posts from "../components/posts/posts"
 
-const Home = ({ resources }) => {
+const Home = ({ posts, resources }) => {
   return (
     <Layout>
       <div className="p-2 sm:p-4 md:p-6 lg:p-8 flex flex-wrap">
-        <div className="w-full md:w-3/4">Left</div>
-        <div className="w-full md:w-1/4">
+        <div className="w-full md:w-3/5">
+          <Posts posts={posts} />
+        </div>
+        <div className="w-full md:w-2/5">
           <Grids resources={resources} />
         </div>
       </div>

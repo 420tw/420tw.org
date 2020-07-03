@@ -12,7 +12,10 @@ export default () => {
       ) {
         ...ResourcesProfileFragment
       }
+      posts: allContentfulPosts(filter: { node_locale: { eq: "zh" } }) {
+        ...PostsFragment
+      }
     }
   `)
-  return <Home resources={data.resources.nodes} />
+  return <Home posts={data.posts.nodes} resources={data.resources.nodes} />
 }

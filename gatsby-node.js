@@ -3,8 +3,14 @@ const path = require(`path`)
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
   const result = await graphql(`
-    query ResourcesQuery {
+    query PagesQuery {
       resources: allContentfulResources {
+        nodes {
+          slug
+          node_locale
+        }
+      }
+      posts: allContentfulPosts {
         nodes {
           slug
           node_locale
@@ -24,6 +30,19 @@ exports.createPages = async ({ graphql, actions }) => {
       context: {
         slug: resource.slug,
         locale: resource.node_locale,
+      },
+    })
+  })
+
+  const PostPageTemplate = path.resolve("./src/templates/post.js")
+  const posts = result.data.posts.nodes
+  posts.forEach(post => {
+    createPage({
+      path: `${post.node_locale}/posts/${post.slug}`,
+      component: PostPageTemplate,
+      context: {
+        slug: post.slug,
+        locale: post.node_locale,
       },
     })
   })

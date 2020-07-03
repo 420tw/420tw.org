@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Community from "../components/community/community"
 
-export const pageQuery = graphql`
+export const communityPageQuery = graphql`
   query CommunityQuery($slug: String!, $locale: String!) {
     contentfulResources(slug: { eq: $slug }, node_locale: { eq: $locale }) {
       id
