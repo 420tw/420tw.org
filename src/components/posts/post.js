@@ -7,9 +7,9 @@ const Post = ({ post }) => {
   const { title, content, publishedAt } = post
   const intl = useIntl()
   return (
-    <div className="max-w-6xl mx-auto my-8">
+    <div className="max-w-3xl mx-auto my-8">
       <h1 className="text-4xl">{title}</h1>
-      <div>
+      <div className="text-sm dark:text-gray-300">
         {intl.formatMessage({ id: "published_at" })}{" "}
         <Moment fromNow locale={intl.locale === "zh" ? "zh-tw" : "en"}>
           {publishedAt}

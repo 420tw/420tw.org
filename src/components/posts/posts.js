@@ -15,8 +15,8 @@ export const Item = ({ post }) => {
           <FaCannabis />
         </div>
         <div className="flex flex-col">
-          <h1 className="text-xl">{title}</h1>
-          <div className="text-sm text-gray-300">
+          <h1 className="text-2xl">{title}</h1>
+          <div className="text-sm dark:text-gray-300">
             {intl.formatMessage({ id: "published_at" })}{" "}
             <Moment fromNow locale={intl.locale === "zh" ? "zh-tw" : "en"}>
               {publishedAt}
