@@ -40,6 +40,7 @@ export const ResourcesFragment = graphql`
       twitter
       website
       youtube
+      node_locale
     }
   }
 `

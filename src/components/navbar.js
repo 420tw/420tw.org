@@ -28,14 +28,13 @@ const Logo = ({ intl }) => {
   )
 }
 
-const NavLink = ({ dest, name }) => {
-  const intl = useIntl()
+const NavLink = props => {
   return (
     <Link
-      to={`/${intl.locale}/${dest}`}
       className="block mt-4 sm:inline-block sm:mt-0 mr-4 rounded px-2 py-1 mt-1 sm:mt-0 text-teal-900 hover:bg-gray-300 dark:text-gray-100 dark:hover:bg-teal-800"
+      {...props}
     >
-      {name}
+      {props.children}
     </Link>
   )
 }
@@ -65,15 +64,12 @@ const Navbar = () => {
         >
           <div className="text-sm sm:flex-grow">
             <NavLink
-              intl={intl}
-              dest={``}
-              name={intl.formatMessage({ id: "home" })}
-            />
-            <NavLink
-              intl={intl}
-              dest={`community`}
-              name={intl.formatMessage({ id: "community" })}
-            />
+              to={`/${intl.locale}/community`}
+              activeClassName="bg-gray-300 dark:bg-teal-800"
+              partiallyActive={true}
+            >
+              {intl.formatMessage({ id: "community" })}
+            </NavLink>
           </div>
           <div>
             <SelectLanguage

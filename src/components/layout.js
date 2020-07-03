@@ -16,9 +16,11 @@ const Layout = ({ children }) => {
       messages={i18nMessages}
     >
       <SiteMetadata pathname={`/`} />
-      <Navbar />
-      {children}
-      <Footer />
+      <div className="antialiased">
+        <Navbar />
+        {children}
+        <Footer />
+      </div>
     </IntlProvider>
   )
 }

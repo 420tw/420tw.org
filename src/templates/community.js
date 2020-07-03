@@ -3,8 +3,8 @@ import { graphql } from "gatsby"
 import Community from "../components/community/community"
 
 export const pageQuery = graphql`
-  query CommunityQuery($slug: String!) {
-    contentfulResources(slug: { eq: $slug }) {
+  query CommunityQuery($slug: String!, $locale: String!) {
+    contentfulResources(slug: { eq: $slug }, node_locale: { eq: $locale }) {
       id
       name
       slug

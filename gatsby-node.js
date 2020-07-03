@@ -23,6 +23,7 @@ exports.createPages = async ({ graphql, actions }) => {
       component: CommunityPageTemplate,
       context: {
         slug: resource.slug,
+        locale: resource.node_locale,
       },
     })
   })
