@@ -52,6 +52,7 @@ const Navbar = () => {
         <div className="block sm:hidden">
           <button
             className="flex items-center px-3 py-2 rounded focus:text-teal-900 dark:focus:text-white focus:outline-none"
+            aria-label="Menu Button"
             onClick={() => setOpened(!isOpened)}
           >
             <MenuButton className="text-xl text-teal-900 hover:text-teal-600 dark:text-white dark:hover:text-gray-400" />
