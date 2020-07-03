@@ -1,15 +1,16 @@
 import React from "react"
-import ResourceCard from "../components/resource/card"
+
 import Layout from "../components/layout"
+import Card from "../components/community/card"
 
 const Community = ({ resources }) => {
-  const resourceCards = resources.map(resource => (
-    <ResourceCard key={resource.id} resource={resource} />
+  const Cards = resources.map(resource => (
+    <Card key={resource.id} resource={resource} />
   ))
   return (
     <Layout>
       <div className="p-2 sm:p-4 md:p-6 lg:p-8 ">
-        <div className="flex flex-wrap">{resourceCards}</div>
+        <div className="flex flex-wrap">{Cards}</div>
       </div>
     </Layout>
   )

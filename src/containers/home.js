@@ -1,5 +1,5 @@
 import React from "react"
-import Grids from "../components/resource/grids"
+import Grids from "../components/community/grids"
 import Layout from "../components/layout"
 
 const Home = ({ resources }) => {

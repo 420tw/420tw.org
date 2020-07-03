@@ -3,7 +3,7 @@ import Img from "gatsby-image"
 import Links from "./links"
 import Tag from "./tag"
 
-const ResourceCard = ({ resource }) => {
+const Card = ({ resource }) => {
   const tags = resource.tags.map((tag, index) => (
     <Tag key={`tag__${index}`} tag={tag} />
   ))
@@ -22,14 +22,14 @@ const ResourceCard = ({ resource }) => {
               {resource.name}
             </h2>
           </div>
-          <div className="px-3">
+          <div className="px-3 mb-1">
             <Links resource={resource} />
           </div>
-          <div className="pb-2 px-3">{tags}</div>
+          <div className="pb-3 px-2">{tags}</div>
         </div>
       </div>
     </div>
   )
 }
 
-export default ResourceCard
+export default Card

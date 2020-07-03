@@ -1,5 +1,5 @@
 .badge {
-    @apply tracking-tighter inline-block text-xs px-2 rounded-full mt-2
+    @apply tracking-tighter inline-block text-xs px-2 rounded mt-2
 }
 
 .badge-gray {
