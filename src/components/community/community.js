@@ -5,10 +5,11 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import Tag from "./tag"
 import Links from "./links"
 import { AiOutlineGlobal } from "react-icons/ai"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 const LocationPin = ({ location }) => {
   return (
-    <a
+    <OutboundLink
       href={`https://www.google.com/maps/search/?api=1&query=${location.lat},${location.lon}`}
       target="_blank"
       rel="noreferrer"
@@ -19,7 +20,7 @@ const LocationPin = ({ location }) => {
           {location.lat}, {location.lon}
         </p>
       </span>
-    </a>
+    </OutboundLink>
   )
 }
 
