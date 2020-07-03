@@ -7,8 +7,8 @@ export const ResourcesProfileFragment = graphql`
       name
       slug
       profile {
-        fluid(maxWidth: 48) {
-          ...GatsbyContentfulFluid_withWebp
+        fixed(width: 48) {
+          ...GatsbyContentfulFixed_withWebp
         }
       }
       node_locale
