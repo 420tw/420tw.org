@@ -2,6 +2,7 @@ import React, { useEffect } from "react"
 import { navigate, withPrefix } from "gatsby"
 import { getUserLangKey } from "ptz-i18n"
 import { useSiteMetadata } from "../hooks/use-site-metadata"
+import SiteMetadata from "../components/site-metadata"
 
 export default function Home() {
   const { languages } = useSiteMetadata()
@@ -14,5 +15,9 @@ export default function Home() {
       navigate(homeUrl)
     }
   })
-  return <div />
+  return (
+    <div>
+      <SiteMetadata />
+    </div>
+  )
 }
