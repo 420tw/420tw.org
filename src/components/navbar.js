@@ -73,7 +73,7 @@ const Navbar = () => {
           </div>
           <div>
             <SelectLanguage
-              style={`block mt-4 sm:inline-block sm:mt-0 mr-4 rounded px-2 py-1 mt-1 sm:mt-0 text-teal-900 hover:bg-gray-300 dark:text-gray-100 dark:hover:bg-teal-800`}
+              style={`text-sm block mt-4 sm:inline-block sm:mt-0 mr-4 rounded px-2 py-1 mt-1 sm:mt-0 text-teal-900 hover:bg-gray-300 dark:text-gray-100 dark:hover:bg-teal-800`}
             />
           </div>
         </div>

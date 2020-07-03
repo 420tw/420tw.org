@@ -17,7 +17,7 @@ const IconLink = ({ dest, icon, title }) => {
         <a
           href={dest}
           target="_blank"
-          className="text-xl pr-2 text-gray-800 dark:text-gray-100"
+          className="pr-2 text-gray-800 dark:text-gray-100"
           rel="noreferrer"
           aria-label={title}
         >

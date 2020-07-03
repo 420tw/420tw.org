@@ -13,7 +13,7 @@ export const pageQuery = graphql`
       }
       profile {
         fluid(maxWidth: 360) {
-          src
+          ...GatsbyContentfulFluid_withWebp
         }
       }
       country
@@ -27,12 +27,16 @@ export const pageQuery = graphql`
       twitter
       website
       youtube
+      location {
+        lat
+        lon
+      }
     }
   }
 `
 
 const CommunityPageTemplate = ({ data }) => {
-  const { contentfulResources: community } = data
-  return <Community community={community} />
+  const { contentfulResources: resource } = data
+  return <Community resource={resource} />
 }
 export default CommunityPageTemplate

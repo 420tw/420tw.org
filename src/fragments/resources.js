@@ -11,6 +11,7 @@ export const ResourcesProfileFragment = graphql`
           ...GatsbyContentfulFluid_withWebp
         }
       }
+      node_locale
     }
   }
 `
