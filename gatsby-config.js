@@ -14,7 +14,7 @@ module.exports = {
   siteMetadata: {
     title: `420 Taiwan 🥦 🦄`,
     description: `420 friendly community in Taiwan. 🥦 🦄`,
-    siteUrl: `https://420tw.org/`,
+    siteUrl: `https://420tw.org`,
     twitter: `@420tw`,
     languages,
   },

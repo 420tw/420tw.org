@@ -7,7 +7,7 @@ import ogImage from "../images/open_graph.jpg"
 const SiteMetadata = ({ pathname }) => {
   const { title, description, siteUrl, twitter } = useSiteMetadata()
   const { currentLang } = useLanguage()
-  const href = `${siteUrl}${currentLang}/${pathname}`
+  const href = `${siteUrl}/${currentLang}/${pathname}`
   return (
     <Helmet defer={false} defaultTitle={title} titleTemplate={`%s | ${title}`}>
       <html lang={currentLang} />
@@ -25,7 +25,7 @@ const SiteMetadata = ({ pathname }) => {
       <meta property="og:type" content="website" />
       <meta property="og:locale" content={currentLang} />
       <meta property="og:site_name" content={title} />
-      <meta property="og:image" content={`${siteUrl}${ogImage}`} />
+      <meta property="og:image" content={`${siteUrl}/${ogImage}`} />
       <meta property="og:image:alt" content="420tw.org Logo" />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
