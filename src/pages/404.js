@@ -1,5 +1,6 @@
 import React from "react"
+import Layout from "../components/layout"
 
 export default function PageNotFound() {
-  return <div>The page you are looking for doesn't exist.</div>
+  return <Layout>The page you are looking for doesn't exist.</Layout>
 }
