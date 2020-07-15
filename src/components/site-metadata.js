@@ -7,7 +7,7 @@ import ogImage from "../images/open_graph.jpg"
 const SiteMetadata = ({ pathname }) => {
   const { title, description, siteUrl, twitter } = useSiteMetadata()
   const { currentLang } = useLanguage()
-  const href = `${siteUrl}${pathname}`
+  const href = `${siteUrl}${currentLang}/${pathname}`
   return (
     <Helmet defer={false} defaultTitle={title} titleTemplate={`%s | ${title}`}>
       <html lang={currentLang} />
