@@ -1,5 +1,5 @@
 module.exports = {
-  title: "420 Asia",
+  title: "420 Taiwan",
   home: "Home",
   community: "Community",
   en: "English",
