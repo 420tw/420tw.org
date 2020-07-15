@@ -12,10 +12,10 @@ require("dotenv").config({
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: `420 Asia 🥦 🦄`,
-    description: `420 friendly community in Asia. 🥦 🦄`,
-    siteUrl: `https://420asia.org/`,
-    twitter: `@420asia`,
+    title: `420 Taiwan 🥦 🦄`,
+    description: `420 friendly community in Taiwan. 🥦 🦄`,
+    siteUrl: `https://420tw.org/`,
+    twitter: `@420tw`,
     languages,
   },
   plugins: [
