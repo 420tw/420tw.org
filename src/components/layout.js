@@ -15,7 +15,7 @@ const Layout = ({ children }) => {
       key={currentLang}
       messages={i18nMessages}
     >
-      <SiteMetadata pathname={`/`} />
+      <SiteMetadata pathname={``} />
       <div className="antialiased">
         <Navbar />
         {children}

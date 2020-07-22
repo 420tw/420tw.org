@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Community from "../components/community/community"
+import CommunityPage from "../components/community/community-page"
 
 export const communityPageQuery = graphql`
   query CommunityQuery($slug: String!, $locale: String!) {
@@ -37,6 +37,6 @@ export const communityPageQuery = graphql`
 
 const CommunityPageTemplate = ({ data }) => {
   const { contentfulResources: resource } = data
-  return <Community resource={resource} />
+  return <CommunityPage resource={resource} />
 }
 export default CommunityPageTemplate

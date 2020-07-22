@@ -26,7 +26,7 @@ const LocationPin = ({ location }) => {
   )
 }
 
-const Community = ({ resource }) => {
+const CommunityPage = ({ resource }) => {
   const { name, profile, description, location, node_locale, slug } = resource
   const { siteUlr } = useSiteMetadata()
   const canonical = `${siteUlr}/${node_locale}/community/${slug}`
@@ -72,4 +72,4 @@ const Community = ({ resource }) => {
     </Layout>
   )
 }
-export default Community
+export default CommunityPage

@@ -21,7 +21,9 @@ exports.createPages = async ({ graphql, actions }) => {
   if (result.errors) {
     throw result.errors
   }
-  const CommunityPageTemplate = path.resolve("./src/templates/community.js")
+  const CommunityPageTemplate = path.resolve(
+    "./src/templates/community-page-template.js"
+  )
   const resources = result.data.resources.nodes
   resources.forEach(resource => {
     createPage({
@@ -34,7 +36,7 @@ exports.createPages = async ({ graphql, actions }) => {
     })
   })
 
-  const PostPageTemplate = path.resolve("./src/templates/post.js")
+  const PostPageTemplate = path.resolve("./src/templates/post-page-template.js")
   const posts = result.data.posts.nodes
   posts.forEach(post => {
     createPage({
