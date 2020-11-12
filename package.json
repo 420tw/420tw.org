@@ -47,7 +47,7 @@
   "devDependencies": {
     "gatsby-plugin-webpack-bundle-analyser-v2": "1.1.13",
     "prettier": "2.0.5",
-    "tailwindcss": "1.4.6",
+    "tailwindcss": "1.9.6",
     "tailwindcss-dark-mode": "1.1.4"
   },
   "repository": {
