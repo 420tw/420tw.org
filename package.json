@@ -48,7 +48,7 @@
     "gatsby-plugin-webpack-bundle-analyser-v2": "1.1.13",
     "prettier": "2.1.2",
     "tailwindcss": "1.9.6",
-    "tailwindcss-dark-mode": "1.1.4"
+    "tailwindcss-dark-mode": "1.1.7"
   },
   "repository": {
     "type": "git",
