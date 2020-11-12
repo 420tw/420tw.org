@@ -32,7 +32,7 @@
     "gatsby-source-contentful": "2.3.18",
     "gatsby-source-filesystem": "2.3.14",
     "gatsby-transformer-sharp": "2.5.7",
-    "lodash": "4.17.15",
+    "lodash": "4.17.19",
     "moment": "2.27.0",
     "netlify-plugin-gatsby-cache": "0.3.2",
     "ptz-i18n": "1.0.0",
