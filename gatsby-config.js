@@ -67,6 +67,7 @@ module.exports = {
         theme_color: `#FFFFFF`,
         display: `standalone`,
         icon: `src/images/marijuana.png`,
+        lang: "zh",
         localize: [
           {
             start_url: `/zh/`,
