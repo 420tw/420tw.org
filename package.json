@@ -40,7 +40,7 @@
     "react-content-loader": "5.1.4",
     "react-dom": "17.0.1",
     "react-helmet": "6.1.0",
-    "react-icons": "3.11.0",
+    "react-icons": "4.1.0",
     "react-intl": "5.10.4",
     "react-moment": "1.0.0"
   },
