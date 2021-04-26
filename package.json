@@ -45,7 +45,7 @@
     "react-moment": "1.0.0"
   },
   "devDependencies": {
-    "gatsby-plugin-webpack-bundle-analyser-v2": "1.1.17",
+    "gatsby-plugin-webpack-bundle-analyser-v2": "1.1.22",
     "prettier": "2.2.1",
     "tailwindcss": "1.9.6",
     "tailwindcss-dark-mode": "1.1.7"
